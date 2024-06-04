@@ -1,0 +1,21 @@
+<div class="container">
+    <div class ="song-container">
+        <ul class="song-list" *ngFor = "let song of list; let i = index">
+            <li (click)="selectedSong(i)">
+              <div class="song-details">
+                <span class="song-name">{{song.songName}}</span>
+                <span class="artist-name">{{song.artistName}}</span>
+              </div>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="songCard">
+        <p class="songHeading">{{list.at(index)?.songName}}</p>
+        <p class="songDescription">This song - {{list.at(index)?.songName}} is sung by {{list.at(index)?.artistName}} in {{list.at(index)?.dateOfRelease}} <a href="#">Want to know more?</a></p>
+        <span *ngIf="(list.at(index)?.mood=='party')"> Perfect for an energetic and uplifting vibe. Great for workouts or dance parties! </span>
+        <span *ngIf="(list.at(index)?.mood=='happy')">  Best for when you're in a cheerful and upbeat mood. Excellent for starting your day on a positive note!  </span>
+        <span *ngIf="(list.at(index)?.mood=='sad')">  A heartfelt ballad perfect for moments when you're feeling sad or nostalgic.  </span>
+        <button class="playButton">Play</button>
+    </div>
+</div>

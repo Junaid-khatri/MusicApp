@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    
+    <img src="assets/images/music-app logo.jpg" alt="Logo" class="logo">
+    
+    <div class="toolbar-content">
+        <span class="app-name">Music App</span>
+    </div>
+
+    <span class="spacer"></span>
+    <button mat-button routerLink="/home">Home</button>
+    <button mat-button routerLink="songs/all">Songs</button>
+    <button mat-button routerLink="/about">About</button>
+    <button mat-button routerLink="/contact">Contact</button>
+    
+</mat-toolbar>
+<div class="container">
+    <div class="side-navBar">
+        
+    </div>
+    <div class="data">
+        <router-outlet></router-outlet>
+    </div>
+</div>

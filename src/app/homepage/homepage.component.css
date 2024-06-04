@@ -1,0 +1,32 @@
+  .toolbar-content{
+    margin-left: 3%;
+  }
+
+
+  .logo {
+    height: 40px;
+    width: auto; 
+    margin-right: 10px; 
+  }
+  
+  .app-name {
+    font-size: 20px; 
+    text-align: center;
+    align-items: center;
+    
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .container{
+    display: flex;
+  }
+  .side-navBar{
+    width:20%;
+  }
+  .data {
+    width:80%;
+  }
+  
