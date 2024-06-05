@@ -47,9 +47,11 @@ export class ListComponent implements OnInit {
             this.fetchData('party');
           } 
           else{
-            console.log('all');
+            this.fetchData('all');
           }
 
+      }else{
+        this.fetchData('all');
       }
       
   }

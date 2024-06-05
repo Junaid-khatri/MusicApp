@@ -1,0 +1,22 @@
+.side-nav-container {
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.side-nav-container::-webkit-scrollbar {
+    width: 0; 
+    height: 0; 
+}
+mat-tree{
+    flex: 1;
+}
+button{
+    background-color:#424242;
+    border-style: none;
+}
+.leaf-node-button{
+    color: #fefefe
+}
+
+

@@ -21,6 +21,7 @@ export class LoginpageComponent {
   public isLoginSucess:any;
   public isError=false;
   onLogin(){
+    console.log('clicked');
     this.isLoginSucess = this.loginService.login(this.loginForm);
     if(this.isLoginSucess){
       this.router.navigate(['/home']);

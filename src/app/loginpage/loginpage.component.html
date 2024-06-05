@@ -1,24 +1,25 @@
-<div  class="container-fluid">
+<div class="login-container">
     <div>
-        <p *ngIf="isError">Incorrect Login Username or Password</p>
+        <p class = danger *ngIf="isError">Incorrect Login Username or Password</p>
     </div>
-    <h1>Login</h1>
-    
-    
-    <form [formGroup]="loginForm">
-
-        <div class="form-group">
-            <label>UserName</label>
-            <input type="text" class="form-control" formControlName="userName"/>
-        </div>
-
-        <div>
-            <label>Password</label>
-            <input type="text" class="form-control" formControlName="password"/>
-        </div>
-
-        <button type="submit" (click)="onLogin()">Login</button>
-
-    </form>
-
-</div>
+    <mat-card class="login-card">
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content>
+       
+        <form class="login-form" [formGroup]="loginForm">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Username" type="text" formControlName="userName" MatFormFieldControl="userName">
+          </mat-form-field>
+  
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Password" type="password" formControlName="password" MatFormFieldControl="password">
+          </mat-form-field>
+  
+          <button mat-raised-button color="primary" class="login-button" type ="submit" (click)="onLogin()">Login</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

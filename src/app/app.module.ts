@@ -13,6 +13,13 @@ import { ChartComponent } from './chart/chart.component';
 import { ListComponent } from './list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginpageComponent,
     HomepageComponent,
     ChartComponent,
-    ListComponent
+    ListComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +36,12 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTreeModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatFormFieldModule
   ],
   providers: [LoginserviceService],
   bootstrap: [AppComponent]

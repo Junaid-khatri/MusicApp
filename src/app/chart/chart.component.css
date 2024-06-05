@@ -1,0 +1,11 @@
+.conatiner{
+    display:flex;
+    flex-direction: row;
+    gap:10%;
+}
+.chart-1{
+width:50%;
+}
+.chart-2{
+    width:50%;
+}
