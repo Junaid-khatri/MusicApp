@@ -17,20 +17,22 @@ export class ChartComponent implements OnInit {
 
 
   songs: Song[] = [];
-  yearCount:number[] = [];
+  yearCount:any = 0;
   
     ngOnInit(): void {
     this.fetchSongs();
-    
-  }
+    this.createChart('pie','myChart');
+    this.createChart('bar','chart2');
+    this.fetchyear();
+    }
 
-  createChart(value: any, chartName: any) {
+    createChart(value: any, chartName: any) {
     const ctx = document.getElementById(chartName);
 
     new Chart(chartName, {
       type: value,
       data: {
-        labels: ['1995', '1996', '1997', '1998'],
+        labels: ['1995', '1996', '1997', '1998'], 
         datasets: [
           {
             label: '# of Votes',
@@ -52,15 +54,17 @@ export class ChartComponent implements OnInit {
   fetchSongs() {
     this.service.getAllSongs().subscribe((data) => {
       this.songs = data;
-      this.years();
     });
+  }
+  fetchyear(){
+    this.service.getSongsByYear(1996).subscribe((data)=>this.yearCount=data);
   }
 
-  years(): void {
-    this.service.getSongsByYear(1996).subscribe((data) => {
-      this.yearCount[0] = data;
-      
-      this.createChart('pie', 'myChart'); // Call createChart after getting yearCount
-    });
+  add(x:number,y:number){
+    console.log(x+y)
   }
+  
+
+
+ 
 }

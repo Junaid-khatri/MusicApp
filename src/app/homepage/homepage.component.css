@@ -22,12 +22,25 @@
 
   .container{
     display: flex;
-    gap:20px;
+    /* gap:20px; */
   }
   .side-navBar{
     width:20%;
   }
   .data {
     width:80%;
+    
+  }
+  mat-toolbar button{
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #c2185b;
+    font-weight: bold;
+  }
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
   

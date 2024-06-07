@@ -1,5 +1,5 @@
 .side-nav-container {
-    height: 100vh; 
+    height: 100%; 
     display: flex; 
     flex-direction: column;
     overflow-y: scroll;
@@ -11,6 +11,7 @@
 mat-tree{
     flex: 1;
 }
+
 button{
     background-color:#424242;
     border-style: none;
@@ -18,5 +19,8 @@ button{
 .leaf-node-button{
     color: #fefefe
 }
+.example-tree-invisible { 
+    display: none; 
+  } 
 
 

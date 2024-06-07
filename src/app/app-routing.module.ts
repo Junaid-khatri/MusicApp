@@ -5,6 +5,7 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ListComponent } from './list/list.component';
 import { ChartComponent } from './chart/chart.component';
 
+
 const routes: Routes = [
   {path: "",component: LoginpageComponent},
   {path: "home",component: HomepageComponent,

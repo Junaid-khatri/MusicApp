@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Song } from './song';
 import { Observable } from 'rxjs';
 import { map, filter } from 'rxjs';
+import * as moment from 'moment';
 
 @Injectable({
   providedIn: 'root',
@@ -36,7 +37,9 @@ export class SongServiceService {
       map(
         (songs) =>
           songs.filter(
-            (song) => new Date(song.dateOfRelease).getFullYear() === year
+            (song) => {
+              console.log(moment(song.dateOfRelease, 'DD/MM/YYYY').toDate().getFullYear()," ",year," ", moment(song.dateOfRelease, 'DD/MM/YYYY').toDate().getFullYear() === year);
+              new Date(song.dateOfRelease).getFullYear() === year}
           ).length
       )
     );

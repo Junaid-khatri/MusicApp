@@ -100,10 +100,8 @@ export class SidebarComponent  {
     else if(name==='Party'){
       this.router.navigate(['mood/party'],{relativeTo:this.activatedRoute})
     }
-
     else{
       this.router.navigate(['songs/all'],{relativeTo:this.activatedRoute})
     }
   }
-   
 }

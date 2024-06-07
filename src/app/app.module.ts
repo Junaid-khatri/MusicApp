@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import{MatToolbarModule} from '@angular/material/toolbar';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
@@ -19,6 +17,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { SideBar2Component } from './side-bar2/side-bar2.component';
+import {
+  CdkMenuItemRadio,
+  CdkMenuItemCheckbox,
+  CdkMenuGroup,
+  CdkMenu,
+  CdkMenuTrigger,
+  CdkMenuItem,
+  CdkMenuBar,
+} from '@angular/cdk/menu';
+import { SongServiceService } from './song-service.service';
 
 
 @NgModule({
@@ -28,7 +37,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     HomepageComponent,
     ChartComponent,
     ListComponent,
-    SidebarComponent
+    SidebarComponent,
+    SideBar2Component
   ],
   imports: [
     BrowserModule,
@@ -41,9 +51,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatIconModule,
     MatSidenavModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    CdkMenuItemRadio,
+    CdkMenuItemCheckbox,
+    CdkMenuGroup,
+    CdkMenu,
+    CdkMenuTrigger,
+    CdkMenuItem,
+    CdkMenuBar,
   ],
-  providers: [LoginserviceService],
+  providers: [LoginserviceService,SongServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
